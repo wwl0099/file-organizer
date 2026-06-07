@@ -1,0 +1,48 @@
+# ============================================
+# 文件整理大师 - 配置文件
+# 你可以在这里自定义文件分类规则
+# ============================================
+
+categories:
+  # --- 图片 ---
+  Images:
+    extensions: [.jpg, .jpeg, .png, .gif, .bmp, .svg, .webp, .ico, .tiff, .heic]
+    folder: 图片
+
+  # --- 文档 ---
+  Documents:
+    extensions: [.pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx, .txt, .md, .csv, .odt, .rtf]
+    folder: 文档
+
+  # --- 音频 ---
+  Audio:
+    extensions: [.mp3, .wav, .flac, .aac, .ogg, .wma, .m4a, .opus]
+    folder: 音频
+
+  # --- 视频 ---
+  Video:
+    extensions: [.mp4, .avi, .mkv, .mov, .wmv, .flv, .webm, .m4v]
+    folder: 视频
+
+  # --- 压缩包 ---
+  Archives:
+    extensions: [.zip, .rar, .7z, .tar, .gz, .bz2, .xz, .iso]
+    folder: 压缩包
+
+  # --- 代码 ---
+  Code:
+    extensions: [.py, .js, .ts, .html, .css, .java, .cpp, .c, .h, .go, .rs, .json, .xml, .yaml, .yml, .toml, .sql, .sh, .bat, .ps1]
+    folder: 代码
+
+  # --- 可执行文件/安装包 ---
+  Programs:
+    extensions: [.exe, .msi, .app, .deb, .rpm, .apk, .dmg]
+    folder: 程序
+
+# --- 全局设置 ---
+settings:
+  create_unknown_folder: true    # 不认识的类型放到 "其他" 文件夹
+  unknown_folder_name: 其他       # 未知类型文件夹的名字
+  dry_run_default: true          # 默认预览模式（不真正移动文件，安全第一！）
+  delete_duplicates: false       # 找到重复文件后是否自动删除
+  date_format: "%Y-%m-%d"        # 重命名时用的日期格式

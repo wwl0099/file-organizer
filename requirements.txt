@@ -1,0 +1,6 @@
+# 文件整理大师 - 依赖包
+# 安装方法: pip install -r requirements.txt
+
+rich>=13.0        # 漂亮的终端输出（彩色、进度条、表格）
+pyyaml>=6.0       # 读取 YAML 配置文件
+pytest>=8.0       # 运行测试（开发用）
