@@ -1,5 +1,6 @@
 """工具函数 - 加载配置、文件大小换算等"""
 
+import sys
 import os
 from pathlib import Path
 import yaml
@@ -16,8 +17,12 @@ def load_config(config_path: Path = None) -> dict:
         解析后的配置字典
     """
     if config_path is None:
-        # 配置文件在 organizer 包的上一级目录
-        config_path = Path(__file__).parent.parent / "config.yaml"
+        # PyInstaller 打包后，文件在临时目录（sys._MEIPASS）
+        if getattr(sys, "frozen", False):
+            base_dir = Path(sys._MEIPASS)
+        else:
+            base_dir = Path(__file__).parent.parent
+        config_path = base_dir / "config.yaml"
 
     if not config_path.exists():
         raise FileNotFoundError(f"找不到配置文件：{config_path}")

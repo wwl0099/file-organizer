@@ -29,3 +29,8 @@ Thumbs.db
 
 # 项目临时文件
 *.log
+*.spec
+*.pkg
+
+# 整理报告
+整理报告_*.txt
